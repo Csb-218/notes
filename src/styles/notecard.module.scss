@@ -1,0 +1,46 @@
+// Variables
+$primary-color: #4a90e2;
+$secondary-color: #f5f5f5;
+$text-color: #333;
+$border-color: #ddd;
+$star-color: gold;
+
+// Mixins
+@mixin box-shadow($color, $blur, $spread) {
+  box-shadow: 0 2px $blur $spread $color;
+}
+
+// Note Card Styles
+.note_card {
+  background-color: $secondary-color;
+  border: 1px solid $border-color;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px 0;
+  width: 20%;
+  @include box-shadow(rgba(255, 255, 255, 0.1), 10px, 0);
+  
+  .note_card_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+
+    .note_timestamp {
+      color: $text-color;
+      font-size: 0.875em;
+    }
+
+    .note_star {
+      color: $star-color;
+      font-size: 1.25em;
+      cursor: pointer;
+    }
+  }
+
+  .note_content {
+    color: $text-color;
+    font-size: 1em;
+    line-height: 1.5em;
+  }
+}
