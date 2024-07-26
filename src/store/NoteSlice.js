@@ -33,7 +33,7 @@ const NoteSlice = createSlice({
              const deadline = action.payload.deadline;
 
              state.initialNotes.push({
-                id:state.length+1,
+                id:state.initialNotes.length+1,
                 note:note,
                 deadline:new Date(deadline),
                 status:'on going'

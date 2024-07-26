@@ -66,6 +66,7 @@ const NoteUpdate = () => {
                            id="note_timestamp"
                            name="note_timestamp"
                            value={newdate}
+                           maxlength="10"
                            onChange={(e) => setDate(e.target.value)}
                        />
                    </div>
